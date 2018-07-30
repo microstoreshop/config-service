@@ -4,3 +4,4 @@
 microserviceBuilderPipeline {
   image = 'config-service'
 }
+ 
