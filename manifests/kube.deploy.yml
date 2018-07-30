@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: config-service-expose
+  namespace: default
   labels:
     app: config-service
 spec:
@@ -54,7 +55,7 @@ spec:
             cpu: 100m
             memory: 192Mi 
         name: config-service
-        image: config-service:latest
+        image: mycluster.icp:8500/default/kbastani/config-service:latest
         ports:
         - containerPort: 8888
         env:
